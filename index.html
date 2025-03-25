@@ -23,17 +23,19 @@
     </div>
 
     <div id="searchBar" class="input-group mb-4">
-      <input type="text" id="movieInput" class="form-control" placeholder="Film keresése...">
-      <button id="searchBtn" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Keresés</button>
+      <form id="searchForm">
+        <input type="text" id="movieInput" class="form-control" placeholder="Film keresése...">
+        <button id="searchBtn" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Keresés</button>
+      </form>
     </div>
 
     <div id="results" class="row row-cols-2 g-4"></div>
 
     <div class="timer-info mb-3" id="timeLabels" style="display: none;">
-      <div class="mb-2"><i class="fa-solid fa-hourglass-start"></i>Elindítva: <span id="startTime"></span></div>
-      <div class="mb-2"><i class="fa-solid fa-forward"></i>Eltelt: <span id="elapsedTime"></span></div>
-      <div class="mb-2"><i class="fa-solid fa-clock"></i>Hátralévő: <span id="remainingTime"></span></div>
-      <div class="mb-2"><i class="fa-solid fa-hourglass-end"></i>Vége: <span id="endTime"></span></div>
+      <div class="mb-2"><i class="fa-solid fa-hourglass-start"></i> Elindítva: <span id="startTime"></span></div>
+      <div class="mb-2"><i class="fa-solid fa-forward"></i> Eltelt: <span id="elapsedTime"></span></div>
+      <div class="mb-2"><i class="fa-solid fa-clock"></i> Hátralévő: <span id="remainingTime"></span></div>
+      <div class="mb-2"><i class="fa-solid fa-hourglass-end"></i> Vége: <span id="endTime"></span></div>
     </div>
     <div class="progress" id="progressWrapper" style="display:none;">
       <div class="progress-bar bg-success" id="progressBar" style="width: 0%"></div>

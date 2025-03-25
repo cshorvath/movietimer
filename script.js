@@ -1,8 +1,9 @@
 const apiKey = 'adb600c3877025d011472c1077cdeff8';
 
-const searchBtn = document.getElementById('searchBtn');
+const searchBtn = document.getElementById('searchForm');
 const backBtn = document.getElementById('backToSearch');
-searchBtn.addEventListener('click', searchMovie);
+const search = document.getElementById('backToSearch');
+searchBtn.addEventListener('submit', searchMovie);
 backBtn.addEventListener('click', () => {
   localStorage.removeItem('movieTimer');
   localStorage.removeItem('movieTimer');
