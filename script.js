@@ -6,7 +6,6 @@ const search = document.getElementById('backToSearch');
 searchBtn.addEventListener('submit', searchMovie);
 backBtn.addEventListener('click', () => {
   localStorage.removeItem('movieTimer');
-  localStorage.removeItem('movieTimer');
   document.getElementById('searchBar').style.display = 'flex';
 });
 
@@ -20,7 +19,8 @@ function restoreTimer() {
 }
 
 
-async function searchMovie() {
+async function searchMovie(e) {
+  e.preventDefault();
   const query = document.getElementById('movieInput').value;
   const res = await fetch(`https://api.themoviedb.org/3/search/movie?language=hu-HU&api_key=${apiKey}&query=${encodeURIComponent(query)}`);
   const data = await res.json();
