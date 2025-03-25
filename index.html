@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Movie Timer</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body class="bg-dark text-white">
+  <div id="overlay"></div>
+  <div class="container py-4 position-relative">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h1><i class="fa-solid fa-film"></i> Movie Timer</h1>
+      <button id="backToSearch" class="btn btn-outline-light d-none"><i class="fa-solid fa-arrow-left"></i>
+        Vissza</button>
+    </div>
+
+    <div id="searchBar" class="input-group mb-4">
+      <input type="text" id="movieInput" class="form-control" placeholder="Film keresése...">
+      <button id="searchBtn" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Keresés</button>
+    </div>
+
+    <div id="results" class="row row-cols-2 g-4"></div>
+
+    <div class="timer-info mb-3" id="timeLabels" style="display: none;">
+      <div class="mb-2"><i class="fa-solid fa-hourglass-start"></i>Elindítva: <span id="startTime"></span></div>
+      <div class="mb-2"><i class="fa-solid fa-forward"></i>Eltelt: <span id="elapsedTime"></span></div>
+      <div class="mb-2"><i class="fa-solid fa-clock"></i>Hátralévő: <span id="remainingTime"></span></div>
+      <div class="mb-2"><i class="fa-solid fa-hourglass-end"></i>Vége: <span id="endTime"></span></div>
+    </div>
+    <div class="progress" id="progressWrapper" style="display:none;">
+      <div class="progress-bar bg-success" id="progressBar" style="width: 0%"></div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
